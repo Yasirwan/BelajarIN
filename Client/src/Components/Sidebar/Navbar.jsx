@@ -166,7 +166,7 @@ const Navbar = ({ children }) => {
               )
             ) : (
               <Link href="/" className="nav-link">
-                🔥 Welcome to LMS !
+                Welcome to Studee 🖐
               </Link>
             )}
           </div>

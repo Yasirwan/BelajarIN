@@ -6,7 +6,7 @@ LMS is a full-featured, multipurpose, premium Learning Management System built w
 
 ## Client
 ```bash
-git clone https://github.com/piyush-agrawal6/LMS-ThreatGaurdians/tree/main/Client
+git clone https://github.com/Tsalsabilla/LMS-Studee/tree/main/Client
 ```
 ```bash
 cd Client
@@ -18,10 +18,9 @@ npm i
 npm run dev
 ```
 
-
 ## Server
 ```bash
-git clone https://github.com/piyush-agrawal6/LMS-ThreatGaurdians/tree/main/Server
+git clone https://github.com/Tsalsabilla/LMS-Studee/tree/main/Server
 ```
 ```bash
 cd Server
@@ -65,7 +64,6 @@ Salt_rounds = 5
 - Email - test@gmail.com
 - Password - test
 
-
 ## Features Completed
 
 - Admin can regulate user access to particular data
@@ -104,4 +102,4 @@ Salt_rounds = 5
 
 ##  Contributor
 
-- [@Piyush Agrawal](https://github.com/piyush-agrawal6)
+- [@Tsalsabilla](https://github.com/Tsalsabilla)

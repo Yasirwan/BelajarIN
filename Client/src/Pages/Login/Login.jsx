@@ -135,11 +135,6 @@ const Login = () => {
 
   return (
     <div className="login">
-      <div>
-        <p>Please use this credentials.</p>
-        <p>Email : test@gmail.com</p>
-        <p>Password : test</p>
-      </div>
       <br />
       <div className="loginContainer">
         <div className="loginImage">
@@ -150,18 +145,12 @@ const Login = () => {
         </div>
         <div className="loginDetail">
           <div>
-            <h3>Login</h3>
+            <h3>Studee</h3>
           </div>
 
           <div>
             {/* login form  */}
             <form onSubmit={handleFormSubmit}>
-              <select name="type" onChange={handleFormChange}>
-                <option value="">Select user type</option>
-                <option value="admin">Admin</option>
-                <option value="tutor">Tutor</option>
-                <option value="student">Student</option>
-              </select>
               <input
                 required
                 name="email"
@@ -178,7 +167,13 @@ const Login = () => {
                 type="password"
                 placeholder="Enter password"
               />
-              <button type="submit">CONTINUE</button>
+              <select name="type" onChange={handleFormChange}>
+                <option value="">Select user type</option>
+                <option value="admin">Admin</option>
+                <option value="tutor">Tutor</option>
+                <option value="student">Student</option>
+              </select>
+              <button type="submit">LOGIN</button>
             </form>
           </div>
         </div>
