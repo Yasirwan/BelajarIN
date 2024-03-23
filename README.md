@@ -61,8 +61,8 @@ Salt_rounds = 5
 
 ## 🔗 Credentials
 
-- Email - test@gmail.com
-- Password - test
+- Email - admin@gmail.com
+- Password - admin
 
 ## Features Completed
 
