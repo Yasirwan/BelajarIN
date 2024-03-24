@@ -56,7 +56,7 @@ router.post("/register", isAuthenticated, async (req, res) => {
             from: "agrawaljoy1@gmail.com",
             to: email,
             subject: "Account ID and Password",
-            text: `Welcome to LMS, Congratulations,Your account has been created successfully.This is your User type : Student and Password : ${password}  `,
+            text: `Welcome to Studee, Congratulations,Your account has been created successfully.This is your User type : Student and Password : ${password}  `,
           };
 
           transporter.sendMail(mailOptions, (error, info) => {

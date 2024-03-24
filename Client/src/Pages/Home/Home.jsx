@@ -14,6 +14,11 @@ import { FiShoppingCart } from "react-icons/fi";
 import { LiaHandHoldingUsdSolid } from "react-icons/lia";
 import { BsTruck, BsClipboardMinus, BsDownload } from "react-icons/bs";
 import { AiOutlineTag, AiOutlineLineChart } from "react-icons/ai";
+import { RiAdminLine } from "react-icons/ri";
+import { BiLogOut, BiUserVoice } from "react-icons/bi";
+import { PiStudentDuotone } from "react-icons/pi";
+import { AiOutlineQuestion } from "react-icons/ai";
+import { TbLayoutGridAdd, TbUsers, TbBrandSpeedtest } from "react-icons/tb";
 import {
   BarChart,
   Bar,
@@ -33,6 +38,7 @@ import "./Home.css";
 
 //Image imports
 import demo from "../../Assets/cartoon.svg";
+import heroImage from '/img/hero.png';
 
 //Data imports
 import { barData, pieData, COLORS } from "../../data.js";
@@ -50,32 +56,32 @@ const Home = () => {
   //overview data
   const overviewData = [
     {
-      icon: <FiShoppingCart />,
+      icon: <RiAdminLine />,
       title: "Admins",
       number: dashboard?.admins?.length || 0,
     },
     {
-      icon: <PiKeyReturnThin />,
-      title: "Tutors",
+      icon: <BiUserVoice />,
+      title: "Teachers",
       number: dashboard?.tutors?.length || 0,
     },
     {
-      icon: <BsTruck />,
-      title: "Student",
+      icon: <PiStudentDuotone />,
+      title: "Students",
       number: dashboard?.students?.length || 0,
     },
     {
-      icon: <AiOutlineTag />,
+      icon: <TbLayoutGridAdd />,
       title: "Contents",
       number: dashboard?.contents?.length || 0,
     },
     {
-      icon: <BsClipboardMinus />,
+      icon: <TbBrandSpeedtest />,
       title: "Quizzes",
       number: dashboard?.quizzes?.length || 0,
     },
     {
-      icon: <AiOutlineLineChart />,
+      icon: <AiOutlineQuestion />,
       title: "Doubts",
       number: dashboard?.doubts?.length || 0,
     },
@@ -102,13 +108,13 @@ const Home = () => {
           <div className="overview">
             <div className="overview-left">
               <div>
-                <h2> Welcome to LMS</h2>
-                <p>Here whats happing in your account today</p>
+                <h2> Welcome to Studee</h2>
+                <p>Transforming Education, Empowering Futures</p>
               </div>
               <div>
-                <button>Whats New !</button>
+                <button>Get Started !</button>
               </div>
-              <img src={demo} alt="" />
+              <img src={heroImage}/>
             </div>
             <div className="overview-right">
               {overviewData?.map(({ icon, title, number }, i) => {
@@ -123,7 +129,7 @@ const Home = () => {
           <div className="charts">
             <div className="lineChart">
               <div className="chartHead">
-                <p>Premium Balance</p>
+                <p>Top Score</p>
               </div>
               <div className="chartBox">
                 <div className="chartOne">
@@ -170,7 +176,7 @@ const Home = () => {
             </div>
             <div className="pieChart">
               <div className="chartHead">
-                <p>Occupancy</p>
+                <p>Announcement</p>
               </div>
               <div className="pieBox">
                 <ResponsiveContainer>
@@ -200,7 +206,7 @@ const Home = () => {
             </div>
           </div>
           <div className="homeFooter">
-            Copyright 2023 © LMS created by Piyush Agrawal
+          © 2024 studee | All Rights Reserved | Created by salsa💖
           </div>
         </div>
       </Navbar>

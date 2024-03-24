@@ -5,8 +5,8 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background: rgb(249,249,249);
-  background: linear-gradient(180deg, rgba(249,249,249,1) 0%, rgba(255,134,158,1) 50%, rgba(146,0,0,1) 100%);
+  background: rgb(255,209,67);
+background: linear-gradient(140deg, rgba(255,209,67,1) 0%, rgba(255,134,158,1) 50%, rgba(146,0,0,1) 100%);
 }
 .loginContainer {
   width: 900px;
@@ -14,7 +14,9 @@
   padding: 2rem 0;
   display: flex;
   border-radius: 40px;
-  background-color: rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    
 }
 .loginImage {
   width: 43%;
@@ -43,13 +45,13 @@ select {
   font-size: 15px;
   letter-spacing: 1px;
   outline: none;
-  border: 1px solid #920000;
+  border: 1px solid var(--red);
   color: rgb(128, 128, 128);
   border-radius: 40px;
 }
 input[type="submit"] {
   cursor: pointer;
-  background-color: #920000;
+  background-color: var(--red);
   color: white;
 }
 .loginDetail > div:nth-child(2) button {
@@ -58,7 +60,7 @@ input[type="submit"] {
   margin: 1rem 0;
   font-size: 15px;
   letter-spacing: 1px;
-  background-color: #920000;
+  background-color: var(--red);
   border: none;
   color: white;
   cursor: pointer;
@@ -71,7 +73,7 @@ input[type="submit"] {
   margin: 5px 0;
 }
 .loginDetail > div:nth-child(2) p a {
-  color: #920000;
+  color: var(--red);
   font-weight: 700;
   cursor: pointer;
 }

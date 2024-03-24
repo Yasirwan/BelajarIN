@@ -159,7 +159,7 @@ const Navbar = ({ children }) => {
             {userType == "Student" ? (
               premium == "false" ? (
                 <Link href="/" className="nav-link">
-                  🔥 Access all features with premium ! <span>Buy now !</span>
+                  Welcome to Studee 🖐
                 </Link>
               ) : (
                 "🔥You are a premium member !"

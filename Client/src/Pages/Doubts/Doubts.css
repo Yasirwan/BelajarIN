@@ -28,10 +28,11 @@
   outline: none;
   cursor: pointer;
   border: none;
-  background-color: rgb(168, 98, 233);
+  background-color:  var(--yellow);
   color: white;
   font-weight: 500;
   margin-bottom: 10px;
+  border-radius: 16px;
 }
 .submitBtn {
   width: 100%;
@@ -39,10 +40,11 @@
   outline: none;
   cursor: pointer;
   border: none;
-  background-color: rgb(54, 141, 248);
+  background-color: var(--red);
   color: white;
   font-weight: 500;
   margin-bottom: 10px;
+  border-radius: 16px;
 }
 .uploadedImgDiv {
   border: 1px solid gray;

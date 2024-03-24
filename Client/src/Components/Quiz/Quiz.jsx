@@ -2,6 +2,10 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteQuiz } from "../../Redux/quiz/action";
 import "./Quiz.css";
+import startImage from '/img/start.png';
+import questionImage from '/img/question.png';
+import starImage from '/img/star.png';
+import deleteImage from '/img/deletec.png';
 
 const Quiz = ({ data }) => {
   const dispatch = useDispatch();
@@ -26,18 +30,18 @@ const Quiz = ({ data }) => {
           <p>Class {data.class}</p>
           <p className="quizTime">{data.totalTime} mins</p>
         </div>
-        <div>
-          <p className="quizPoint">Questions : {data.noOfQuestions}</p>
-          <p className="quizPoint">Points : {data.totalPoint}</p>
+        <div className= "quizRight">
+          <p className="quizPoint"><img src={questionImage}/>Questions : {data.noOfQuestions}</p>
+          <p className="quizPoint"><img src={starImage}/>Points : {data.totalPoint}</p>
           {userType == "Admin" || userType == "Tutor" ? (
             <button
               className="deleteQuiz"
               onClick={() => deleteQuizFunc(data._id)}
             >
-              Delete Quiz
+              <img src={deleteImage}/>
             </button>
           ) : (
-            <button className="startQuiz">Start Quiz</button>
+            <button className="startQuiz"><img src={startImage}/></button>
           )}
         </div>
       </div>

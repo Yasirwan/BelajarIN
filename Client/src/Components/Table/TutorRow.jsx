@@ -4,6 +4,8 @@ import { deleteTutor, editTutor } from "../../Redux/tutor/action";
 
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { Modal, message, Popconfirm, Button } from "antd";
+import deleteImage from '/img/deletec.png';
+import editImage from '/img/edit.png';
 
 const TutorRow = ({ data }) => {
   const dispatch = useDispatch();
@@ -50,12 +52,12 @@ const TutorRow = ({ data }) => {
       <td style={{ color: data.access == "true" ? "Green" : "Red" }}>
         {data.access == "true" ? <AiFillEye /> : <AiFillEyeInvisible />}
       </td>
-      <td onClick={showModal}>Edit</td>
+      <td onClick={showModal}><img src={editImage}/></td>
       <Modal
         title="Basic Modal"
         open={isModalOpen}
         onCancel={handleCancel}
-        footer={[<Button onClick={handleCancel}>Cancel</Button>]}
+        footer={[]}
       >
         <form onSubmit={(e) => handleSubmit(e)}>
           <input
@@ -74,12 +76,12 @@ const TutorRow = ({ data }) => {
           </select>
           <select name="subject" onChange={(e) => handleAdminDataChange(e)}>
             <option value="">Choose Subject</option>
-            <option value="Maths">Maths</option>
-            <option value="Physics">Physics</option>
-            <option value="Chemistry">Chemistry</option>
-            <option value="Biology">Biology</option>
-            <option value="Political science">Political science</option>
-            <option value="History">History</option>
+            <option value="Algoritma">Algoritma</option>
+              <option value="Naratif">Naratif</option>
+              <option value="Pseudocode">Pseudocode</option>
+              <option value="Flowchart">Flowchart</option>
+              <option value="Pemrograman, Tipe data, Variabel dan Operator">Pemrograman, Tipe data, Variabel dan Operator</option>
+              <option value="Percabangan dan Perulangan">Percabangan dan Perulangan</option>
           </select>
           <input type="submit" value="Edit" />
         </form>
@@ -92,7 +94,7 @@ const TutorRow = ({ data }) => {
         okText="Yes"
         cancelText="No"
       >
-        <td>Delete</td>
+        <td><img src={deleteImage}/></td>
       </Popconfirm>
     </tr>
   );

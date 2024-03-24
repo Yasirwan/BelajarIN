@@ -145,7 +145,6 @@ const Student = () => {
           bodyStyle={{ paddingBottom: 80 }}
           extra={
             <Space>
-              <Button onClick={onClose}>Cancel</Button>
             </Space>
           }
         >
@@ -177,14 +176,14 @@ const Student = () => {
             />
             <select name="class" onChange={(e) => handleInputChange(e)}>
               <option value="">Choose Class</option>
-              <option value={5}>5</option>
-              <option value={6}>6</option>
-              <option value={7}>7</option>
-              <option value={8}>8</option>
-              <option value={9}>9</option>
-              <option value={10}>10</option>
+              <option value={5}>X PPLG 1</option>
+              <option value={6}>X PPLG 2</option>
+              <option value={7}>X PPLG 3</option>
+              <option value={8}>X PPLG 4</option>
+              <option value={9}>X PPLG 5</option>
+              <option value={10}>X PPLG 6</option>
             </select>
-            <input type="submit" value="Add Tutor" />
+            <input type="submit" value="Add Student" />
           </form>
           {loading ? (
             <Space

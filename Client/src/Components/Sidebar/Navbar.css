@@ -39,7 +39,7 @@
 }
 
 #sidebar .side-menu.top li:nth-child(1) a {
-  color: var(--blue);
+  color: var(--yellow);
 }
 #sidebar .side-menu.top li:last-child a {
   color: var(--red);
@@ -102,17 +102,19 @@
   font-size: 22px;
 }
 #content nav .menuIcon:hover {
-  color: var(--blue);
+  transform: translateY(-0.2rem);
+  transition: transform 150ms;
+  color: var(--red);
 }
 #content nav .nav-link {
   font-size: 16px;
   transition: 0.3s ease;
 }
 #content nav .nav-link:hover {
-  color: var(--blue);
+  color: var(--red);
 }
 #content nav .nav-link span {
-  color: var(--blue);
+  color: var(--red);
 }
 #content nav .navIcon {
   display: flex;
