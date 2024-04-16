@@ -8,6 +8,7 @@ import { Button, Drawer, Space, Spin, message } from "antd";
 import { useDispatch, useSelector } from "react-redux";
 import { createQuiz, getQuizData } from "../../Redux/quiz/action";
 import { useNavigate } from "react-router-dom";
+import deleteImage from '/img/deletec.png';
 
 const Quizzes = () => {
   const [open, setOpen] = useState(false);
@@ -56,6 +57,7 @@ const Quizzes = () => {
     option2: "",
     option3: "",
     option4: "",
+    option5: "",
   };
 
   const [formData, setFormData] = useState(initialFormData);
@@ -194,7 +196,7 @@ const Quizzes = () => {
           open={open}
           extra={
             <Space>
-              <Button onClick={onClose}>Cancel</Button>
+               {/* <Button onClick={onClose}>X</Button> */}
             </Space>
           }
         >
@@ -215,21 +217,21 @@ const Quizzes = () => {
             />
             <select name="class" onChange={(e) => handleFormChange(e)}>
               <option value="">Choose Class</option>
-              <option value={5}>5</option>
-              <option value={6}>6</option>
-              <option value={7}>7</option>
-              <option value={8}>8</option>
-              <option value={9}>9</option>
-              <option value={10}>10</option>
+              <option value={5}>X PPLG 1</option>
+              <option value={6}>X PPLG 2</option>
+              <option value={7}>X PPLG 3</option>
+              <option value={8}>X PPLG 4</option>
+              <option value={9}>X PPLG 5</option>
+              <option value={10}>X PPLG 6</option>
             </select>
             <select name="subject" onChange={(e) => handleFormChange(e)}>
               <option value="">Choose Subject</option>
-              <option value="Maths">Maths</option>
-              <option value="Physics">Physics</option>
-              <option value="Chemistry">Chemistry</option>
-              <option value="Biology">Biology</option>
-              <option value="Political science">Political science</option>
-              <option value="History">History</option>
+              <option value="Maths">Algoritma</option>
+              <option value="Physics">Naratif</option>
+              <option value="Chemistry">Pseudocode</option>
+              <option value="Biology">Flowchart</option>
+              <option value="Political science">Pemrograman, Tipe data, Variabel dan Operator</option>
+              <option value="History">Percabangan dan Perulangan</option>
             </select>
             <input
               placeholder="No.of Questions"
@@ -324,17 +326,25 @@ const Quizzes = () => {
               onChange={(e) => handleQuestionChange(e)}
             />
             <input
+              required
+              placeholder="Enter Option 5"
+              type="text"
+              name="option5"
+              value={question.option5}
+              onChange={(e) => handleQuestionChange(e)}
+            />
+            <input
               type="Submit"
-              value="Add Question"
+              value="Save"
               onChange={() => console.log("Question added")}
             />
           </form>
           <button className="Review" onClick={showChildrenDrawer}>
-            Review Questions
+            Review
           </button>
           <br></br>
           <button className="Submit" onClick={() => submitQuiz()}>
-            Submit Quiz
+            Add Quiz
           </button>
 
           <Drawer
@@ -354,11 +364,12 @@ const Quizzes = () => {
                     <h4>
                       {i + 1} .{ques.question}
                     </h4>
-                    <p>1. {ques.option1}</p>
-                    <p>2. {ques.option2}</p>
-                    <p>3. {ques.option3}</p>
-                    <p>4. {ques.option4}</p>
-                    <button onClick={() => removeQuestion(i)}>Remove</button>
+                    <p>a. {ques.option1}</p>
+                    <p>b. {ques.option2}</p>
+                    <p>c. {ques.option3}</p>
+                    <p>d. {ques.option4}</p>
+                    <p>e. {ques.option5}</p>
+                    <button onClick={() => removeQuestion(i)}><img src={deleteImage}/></button>
                   </div>
                 );
               })

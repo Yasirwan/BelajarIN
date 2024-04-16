@@ -20,13 +20,13 @@
   font-size: 15px;
   letter-spacing: 0.7px;
   text-transform: capitalize;
-  color: rgba(82, 82, 108, 0.8);
+  color: rgba(108, 86, 82, 0.8);
   white-space: nowrap;
   overflow-x: hidden;
   font-weight: 500;
 }
 #sidebar .side-menu.top li.active a {
-  color: var(--blue);
+  color: var(--red);
 }
 #sidebar.hide .side-menu li a {
   width: calc(48px - (4px * 2));
@@ -36,7 +36,9 @@
   color: var(--red);
 }
 #sidebar .side-menu.top li a:hover {
-  color: var(--blue);
+  color: var(--pink);
+  transform: translateY(-0.2rem);
+  transition: transform 150ms;
 }
 #sidebar .side-menu li a svg {
   min-width: calc(60px - ((4px + 6px) * 2));

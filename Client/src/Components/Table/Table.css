@@ -26,10 +26,27 @@ td {
 .tableRow td:nth-last-child(2) {
   color: rgb(17, 198, 17);
   cursor: pointer;
-  font-weight: 500;
+  padding: 4px;
+  text-align: center;
 }
+
+.tableRow td:nth-last-child(2) img {
+  width: 100%;
+  height: auto;
+  width: 20px;
+  height: 20px;
+}
+
 .tableRow td:last-child {
   color: rgb(243, 28, 28);
   cursor: pointer;
-  font-weight: 500;
+  padding: 4px;
+  text-align: center;
+}
+
+.tableRow td:last-child img {
+  width: 100%;
+  height: auto;
+  width: 20px;
+  height: 20px;
 }

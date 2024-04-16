@@ -20,7 +20,8 @@
   justify-content: space-between;
   gap: 10px;
   padding: 30px;
-  background: linear-gradient(103.75deg, #33b1ee -13.9%, #7366ff 79.68%);
+  background: rgb(255,209,67);
+  background: linear-gradient(140deg, rgba(255,209,67,1) 0%, rgba(255,134,158,1) 50%, rgba(146,0,0,1) 100%);
   color: #fff;
   border-radius: 10px;
   position: relative;
@@ -36,15 +37,15 @@
   border: 1px solid white;
   color: white;
   padding: 10px 25px;
-  border-radius: 6px;
+  border-radius:40px;
   letter-spacing: 1px;
   font-size: 14px;
 }
 .main .overview .overview-left img {
-  width: 50%;
+  width: 75%;
   position: absolute;
-  right: 20px;
-  bottom: -20px;
+  left: 140px;
+  bottom: -32px;
 }
 
 .main .overview .overview-right {
@@ -56,7 +57,7 @@
 .main .overview-right li {
   padding: 10px;
   background: white;
-  border-radius: 15px;
+  border-radius: 80px;
   box-shadow: rgba(178, 181, 184, 0.2) 0px 8px 24px;
   display: flex;
   align-items: center;
@@ -73,34 +74,34 @@
 }
 
 .main .overview-right li:nth-child(1) > div {
-  border: 1px solid #f73164;
-  border-left: 3px solid #f73164;
-  color: #f73164;
+  border: 1px solid var(--pink);
+  border-left: 3px solid var(--pink);
+  color: var(--pink);
 }
 .main .overview-right li:nth-child(2) > div {
-  border: 1px solid #ffaa05;
-  border-left: 3px solid #ffaa05;
-  color: #ffaa05;
+  border: 1px solid var(--yellow);
+  border-left: 3px solid var(--yellow);
+  color: var(--yellow);
 }
 .main .overview-right li:nth-child(3) > div {
-  border: 1px solid #7366ff;
-  border-left: 3px solid #7366ff;
-  color: #7366ff;
+  border: 1px solid var(--blue);
+  border-left: 3px solid var(--blue);
+  color: var(--blue);
 }
 .main .overview-right li:nth-child(4) > div {
-  border: 1px solid #54ba4a;
-  border-left: 3px solid #54ba4a;
-  color: #54ba4a;
+  border: 1px solid var(--green);
+  border-left: 3px solid var(--green);
+  color: var(--green);
 }
 .main .overview-right li:nth-child(5) > div {
-  border: 1px solid #f73164;
-  border-left: 3px solid #f73164;
-  color: #f73164;
+  border: 1px solid var(--pink);
+  border-left: 3px solid var(--pink);
+  color: var(--pink);
 }
 .main .overview-right li:nth-child(6) > div {
-  border: 1px solid #ffaa05;
-  border-left: 3px solid #ffaa05;
-  color: #ffaa05;
+  border: 1px solid var(--yellow);
+  border-left: 3px solid var(--yellow);
+  color: var(--yellow);
 }
 .main .overview-right li .text h3 {
   font-size: 24px;

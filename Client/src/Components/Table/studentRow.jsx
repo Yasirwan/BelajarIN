@@ -5,6 +5,8 @@ import { deleteStudent, editStudent } from "../../Redux/student/action";
 //antd imports
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { Modal, message, Popconfirm, Button } from "antd";
+import deleteImage from '/img/deletec.png';
+import editImage from '/img/edit.png';
 
 const StudentRow = ({ data }) => {
   const dispatch = useDispatch();
@@ -51,12 +53,12 @@ const StudentRow = ({ data }) => {
       <td style={{ color: data.access == "true" ? "Green" : "Red" }}>
         {data.access == "true" ? <AiFillEye /> : <AiFillEyeInvisible />}
       </td>
-      <td onClick={showModal}>Edit</td>
+      <td onClick={showModal}><img src={editImage}/></td>
       <Modal
         title="Basic Modal"
         open={isModalOpen}
         onCancel={handleCancel}
-        footer={[<Button onClick={handleCancel}>Cancel</Button>]}
+        footer={[]}
       >
         <form onSubmit={(e) => handleSubmit(e)}>
           <input
@@ -75,12 +77,12 @@ const StudentRow = ({ data }) => {
           </select>
           <select name="class" onChange={(e) => handleAdminDataChange(e)}>
             <option value="">Choose Class</option>
-            <option value={5}>5</option>
-            <option value={6}>6</option>
-            <option value={7}>7</option>
-            <option value={8}>8</option>
-            <option value={9}>9</option>
-            <option value={10}>10</option>
+            <option value="X PPLG 1">X PPLG 1</option>
+              <option value="X PPLG 2">X PPLG 2</option>
+              <option value="X PPLG 3">X PPLG 3</option>
+              <option value="X PPLG 4">X PPLG 4</option>
+              <option value="X PPLG 5">X PPLG 5</option>
+              <option value="X PPLG 6">X PPLG 6</option>
           </select>
           <input type="submit" value="Edit" />
         </form>
@@ -93,7 +95,7 @@ const StudentRow = ({ data }) => {
         okText="Yes"
         cancelText="No"
       >
-        <td>Delete</td>
+        <td><img src={deleteImage}/></td>
       </Popconfirm>
     </tr>
   );

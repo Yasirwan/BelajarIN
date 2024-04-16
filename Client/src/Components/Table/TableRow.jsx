@@ -4,6 +4,8 @@ import { deleteAdmin, editAdmin } from "../../Redux/admin/action";
 
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai";
 import { Modal, message, Popconfirm, Button } from "antd";
+import deleteImage from '/img/deletec.png';
+import editImage from '/img/edit.png';
 
 const TableRow = ({ data }) => {
   const path = window.location.pathname;
@@ -51,12 +53,12 @@ const TableRow = ({ data }) => {
       <td style={{ color: data.access == "true" ? "Green" : "Red" }}>
         {data.access == "true" ? <AiFillEye /> : <AiFillEyeInvisible />}
       </td>
-      <td onClick={showModal}>Edit</td>
+      <td onClick={showModal}><img src={editImage}/></td>
       <Modal
         title="Basic Modal"
         open={isModalOpen}
         onCancel={handleCancel}
-        footer={[<Button onClick={handleCancel}>Cancel</Button>]}
+        footer={[]}
       >
         <form onSubmit={(e) => handleSubmit(e)}>
           <input
@@ -84,7 +86,7 @@ const TableRow = ({ data }) => {
         okText="Yes"
         cancelText="No"
       >
-        <td>Delete</td>
+        <td><img src={deleteImage}/></td>
       </Popconfirm>
     </tr>
   );

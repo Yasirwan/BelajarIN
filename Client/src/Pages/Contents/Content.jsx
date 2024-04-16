@@ -155,14 +155,13 @@ const Content = () => {
 
         {/* create content drawer */}
         <Drawer
-          title="Create a new account"
+          title="Create Content"
           width={720}
           onClose={onClose}
           open={open}
           bodyStyle={{ paddingBottom: 80 }}
           extra={
             <Space>
-              <Button onClick={onClose}>Cancel</Button>
             </Space>
           }
         >
@@ -176,27 +175,27 @@ const Content = () => {
             />
             <select name="class" onChange={(e) => handleFormChange(e)}>
               <option value="">Choose Class</option>
-              <option value={5}>5</option>
-              <option value={6}>6</option>
-              <option value={7}>7</option>
-              <option value={8}>8</option>
-              <option value={9}>9</option>
-              <option value={10}>10</option>
+              <option value={5}>X PPLG 1</option>
+              <option value={6}>X PPLG 2</option>
+              <option value={7}>X PPLG 3</option>
+              <option value={8}>X PPLG 4</option>
+              <option value={9}>X PPLG 5</option>
+              <option value={10}>X PPLG 6</option>
             </select>
             <select name="subject" onChange={(e) => handleFormChange(e)}>
               <option value="">Choose Subject</option>
-              <option value="Maths">Maths</option>
-              <option value="Physics">Physics</option>
-              <option value="Chemistry">Chemistry</option>
-              <option value="Biology">Biology</option>
-              <option value="Political science">Political science</option>
-              <option value="History">History</option>
+              <option value="Maths">Algoritma</option>
+              <option value="Physics">Naratif</option>
+              <option value="Chemistry">Pseudocode</option>
+              <option value="Biology">Flowchart</option>
+              <option value="Political science">Pemrograman, Tipe data, Variabel dan Operator</option>
+              <option value="History">Percabangan dan Perulangan</option>
             </select>
             <select name="type" onChange={(e) => handleFormChange(e)}>
               <option value="">Choose Content Type</option>
-              <option value="Assignment">Assignment</option>
-              <option value="Project">Project</option>
-              <option value="Practice">Practice</option>
+              <option value="Assignment">Video</option>
+              <option value="Project">Book</option>
+              <option value="Practice">LKPD</option>
             </select>
           </form>
           {size ? (

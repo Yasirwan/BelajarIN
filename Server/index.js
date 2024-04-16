@@ -2,10 +2,19 @@
 require("dotenv").config();
 const express = require("express");
 const app = express();
-const { connection } = require("./configs/db");
+//const { connection } = require("./configs/db");
 const cors = require("cors");
 const mongoose = require("mongoose");
-mongoose.set("strictQuery", false);
+// mongoose.set("strictQuery", false);
+
+mongoose.connect(process.env.dbURL)
+.then(() => {
+  console.log("Connected MongoDB");
+})
+.catch((err) => {
+  console.error("Connection error", err);
+  process.exit();
+});
 
 //port
 const PORT = process.env.port || 8080;
@@ -37,11 +46,5 @@ app.use("/dashboard", DashboardRouter);
 
 //app listening
 app.listen(PORT, async () => {
-  try {
-    await connection;
-    console.log("Connected to DB");
-  } catch (error) {
-    console.log("Unable to connect to DB");
-  }
   console.log(`Listening at port ${PORT}`);
 });
