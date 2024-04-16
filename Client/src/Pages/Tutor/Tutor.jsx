@@ -70,11 +70,11 @@ const Tutor = () => {
             content: "User already registered",
             duration: 3,
           });
-        } else if (res.msg === "Tutor Registration failed") {
+        } else if (res.msg === "Teacher Registration failed") {
           setLoading(false);
           messageApi.open({
             type: "error",
-            content: "Tutor Registration failed",
+            content: "Teacher Registration failed",
             duration: 3,
           });
         } else {
@@ -83,7 +83,7 @@ const Tutor = () => {
           onClose();
           messageApi.open({
             type: "success",
-            content: "Tutor Registered Successfully",
+            content: "Teacher Registered Successfully",
             duration: 3,
           });
           messageApi.open({
@@ -111,7 +111,7 @@ const Tutor = () => {
   return (
     <Navbar>
       <div className="admin">
-        <Header Title={"Tutor Data"} Address={"Tutor"} />
+        <Header Title={"Teacher Data"} Address={"Teacher"} />
         <div className="adminData">
           <section className="tableBody">
             <table>
@@ -144,7 +144,6 @@ const Tutor = () => {
           bodyStyle={{ paddingBottom: 80 }}
           extra={
             <Space>
-              <Button onClick={onClose}>Cancel</Button>
             </Space>
           }
         >
@@ -176,14 +175,14 @@ const Tutor = () => {
             />
             <select name="subject" onChange={(e) => handleInputChange(e)}>
               <option value="">Choose Subject</option>
-              <option value="Maths">Maths</option>
-              <option value="Physics">Physics</option>
-              <option value="Chemistry">Chemistry</option>
-              <option value="Biology">Biology</option>
-              <option value="Political science">Political science</option>
-              <option value="History">History</option>
+              <option value="Maths">Algoritma</option>
+              <option value="Physics">Naratif</option>
+              <option value="Chemistry">Pseudocode</option>
+              <option value="Biology">Flowchart</option>
+              <option value="Political science">Pemrograman, Tipe data, Variabel dan Operator</option>
+              <option value="History">Percabangan dan Perulangan</option>
             </select>
-            <input type="submit" value="Add Tutor" />
+            <input type="submit" value="Add Teacher" />
           </form>
           {loading ? (
             <Space

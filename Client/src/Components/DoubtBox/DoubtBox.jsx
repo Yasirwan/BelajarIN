@@ -2,6 +2,9 @@ import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteDoubt, resolveDoubt } from "../../Redux/doubt/action";
+import viewImage from '/img/view.png';
+import deleteImage from '/img/deletec.png';
+import doneImage from '/img/done.png';
 
 import "./DoubtBox.css";
 
@@ -36,19 +39,19 @@ const DoubtBox = ({ data }) => {
         <div>
           {user?.userType == "Admin" || user?.userType == "Tutor" ? (
             <div className="contentOption">
-              <button onClick={() => handleClick(data._id)}>Check</button>
-              <button onClick={() => handleDelete(data._id)}>Delete</button>
+              <button onClick={() => handleClick(data._id)}> <img src={viewImage}/> </button>
+              <button onClick={() => handleDelete(data._id)}><img src={deleteImage}/></button>
             </div>
           ) : (
             <div className="contentOption">
               <p>{data.type}</p>
-              <button onClick={() => handleClick(data._id)}>Check</button>
+              <button onClick={() => handleClick(data._id)}><img src={viewImage}/></button>
               {data?.resolved == "No" ? (
                 <button onClick={() => handleResolve(data._id)}>
-                  Resolved?
+                  <img src={doneImage}/>
                 </button>
               ) : (
-                <button onClick={() => handleDelete(data._id)}>Delete</button>
+                <button onClick={() => handleDelete(data._id)}><img src={deleteImage}/></button>
               )}
             </div>
           )}

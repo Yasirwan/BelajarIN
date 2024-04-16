@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Navigate, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { adminLogin, studentLogin, tutorLogin } from "../../Redux/auth/action";
+import coverImage from '/img/cover.png';
 
 //css imports
 import { message, Space, Spin } from "antd";
@@ -138,10 +139,7 @@ const Login = () => {
       <br />
       <div className="loginContainer">
         <div className="loginImage">
-          <img
-            src="https://img.freepik.com/free-vector/tablet-login-concept-illustration_114360-7863.jpg"
-            alt=""
-          />
+          <img src={coverImage}/>
         </div>
         <div className="loginDetail">
           <div>
@@ -170,7 +168,7 @@ const Login = () => {
               <select name="type" onChange={handleFormChange}>
                 <option value="">Select user type</option>
                 <option value="admin">Admin</option>
-                <option value="tutor">Tutor</option>
+                <option value="tutor">Teacher</option>
                 <option value="student">Student</option>
               </select>
               <button type="submit">LOGIN</button>

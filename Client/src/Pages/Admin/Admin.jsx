@@ -133,7 +133,6 @@ const Admin = () => {
           bodyStyle={{ paddingBottom: 80 }}
           extra={
             <Space>
-              <Button onClick={onClose}>Cancel</Button>
             </Space>
           }
         >
