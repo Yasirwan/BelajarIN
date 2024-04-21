@@ -43,10 +43,10 @@ const Navbar = ({ children }) => {
   const adminData = [
     { icon: <HiOutlineHome />, title: "Dashboard", address: "/home" },
     { icon: <RiAdminLine />, title: "Admins", address: "/admin" },
-    { icon: <BiUserVoice />, title: "Tutors", address: "/tutor" },
+    // { icon: <BiUserVoice />, title: "Tutors", address: "/tutor" },
     { icon: <PiStudentDuotone />, title: "Students", address: "/student" },
     { icon: <TbBrandSpeedtest />, title: "Quizzes", address: "/quizzes" },
-    { icon: <TbLayoutGridAdd />, title: "Contents", address: "/contents" },
+    // { icon: <TbLayoutGridAdd />, title: "Contents", address: "/contents" },
     { icon: <TbUsers />, title: "Leader Board", address: "/leaderboard" },
   ];
   const studentData = [
@@ -58,15 +58,15 @@ const Navbar = ({ children }) => {
     // { icon: <TbUsers />, title: "Leader Board", address: "/leaderboard" },
     // { icon: <BsBookmarkCheck />, title: "Bookmarks", address: "/bookmarks" },
   ];
-  const tutorData = [
-    { icon: <HiOutlineHome />, title: "Dashboard", address: "/home" },
-    { icon: <PiStudentDuotone />, title: "Students", address: "/student" },
-    { icon: <TbBrandSpeedtest />, title: "Quizzes", address: "/quizzes" },
-    { icon: <TbLayoutGridAdd />, title: "Contents", address: "/contents" },
-    { icon: <TbUsers />, title: "Leader Board", address: "/leaderboard" },
-    { icon: <AiOutlineQuestion />, title: "Doubts", address: "/doubts" },
-    // { icon: <TbMessages />, title: "Message", address: "/messages" },
-  ];
+  // const tutorData = [
+  //   { icon: <HiOutlineHome />, title: "Dashboard", address: "/home" },
+  //   { icon: <PiStudentDuotone />, title: "Students", address: "/student" },
+  //   { icon: <TbBrandSpeedtest />, title: "Quizzes", address: "/quizzes" },
+  //   { icon: <TbLayoutGridAdd />, title: "Contents", address: "/contents" },
+  //   { icon: <TbUsers />, title: "Leader Board", address: "/leaderboard" },
+  //   { icon: <AiOutlineQuestion />, title: "Doubts", address: "/doubts" },
+  //   // { icon: <TbMessages />, title: "Message", address: "/messages" },
+  // ];
 
   // Dropdown menu
   const items = [
