@@ -6,8 +6,8 @@ import Menu from "../Menu/Menu";
 import { Dropdown } from "antd";
 
 // Image imports
-import user from "../../Assets/useravatar.png";
-import logo from "../../Assets/logo.png";
+import user from "../../Assets/user.png";
+import logo from "../../Assets/LogoInt.png";
 
 // Icon imports
 import { BiLogOut, BiUserVoice } from "react-icons/bi";
@@ -52,10 +52,10 @@ const Navbar = ({ children }) => {
   const studentData = [
     { icon: <HiOutlineHome />, title: "Dashboard", address: "/home" },
     { icon: <TbBrandSpeedtest />, title: "Quizzes", address: "/quizzes" },
-    { icon: <TbLayoutGridAdd />, title: "Contents", address: "/contents" },
-    { icon: <AiOutlineQuestion />, title: "Doubts", address: "/doubts" },
+    { icon: <TbLayoutGridAdd />, title: "Courses", address: "/contents" },
+    { icon: <AiOutlineQuestion />, title: "Grades", address: "/doubts" },
     // { icon: <TbMessages />, title: "Message", address: "/messages" },
-    { icon: <TbUsers />, title: "Leader Board", address: "/leaderboard" },
+    // { icon: <TbUsers />, title: "Leader Board", address: "/leaderboard" },
     // { icon: <BsBookmarkCheck />, title: "Bookmarks", address: "/bookmarks" },
   ];
   const tutorData = [
@@ -159,14 +159,14 @@ const Navbar = ({ children }) => {
             {userType == "Student" ? (
               premium == "false" ? (
                 <Link href="/" className="nav-link">
-                  Welcome to Studee 🖐
+                  Welcome to BelajarIN 
                 </Link>
               ) : (
                 "🔥You are a premium member !"
               )
             ) : (
               <Link href="/" className="nav-link">
-                Welcome to Studee 🖐
+                Welcome to BelajarIN 
               </Link>
             )}
           </div>
