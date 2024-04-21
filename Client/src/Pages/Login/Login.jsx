@@ -70,35 +70,35 @@ const Login = () => {
         }
       });
     }
-    if (formData.type === "tutor") {
-      dispatch(tutorLogin(formData)).then((res) => {
-        if (res.message === "Wrong credentials") {
-          setLoading(false);
-          messageApi.open({
-            type: "info",
-            content: "Wrong credentials !",
-            duration: 3,
-          });
-        } else if (res.message === "Access Denied") {
-          setLoading(false);
-          messageApi.open({
-            type: "info",
-            content: "Your access has been revoked by the admin !",
-            duration: 3,
-          });
-        } else if (res.message === "error") {
-          setLoading(false);
-          messageApi.open({
-            type: "info",
-            content: "Something went wrong, please try again",
-            duration: 3,
-          });
-        } else {
-          setLoading(false);
-          return navigate("/home");
-        }
-      });
-    }
+    // if (formData.type === "tutor") {
+    //   dispatch(tutorLogin(formData)).then((res) => {
+    //     if (res.message === "Wrong credentials") {
+    //       setLoading(false);
+    //       messageApi.open({
+    //         type: "info",
+    //         content: "Wrong credentials !",
+    //         duration: 3,
+    //       });
+    //     } else if (res.message === "Access Denied") {
+    //       setLoading(false);
+    //       messageApi.open({
+    //         type: "info",
+    //         content: "Your access has been revoked by the admin !",
+    //         duration: 3,
+    //       });
+    //     } else if (res.message === "error") {
+    //       setLoading(false);
+    //       messageApi.open({
+    //         type: "info",
+    //         content: "Something went wrong, please try again",
+    //         duration: 3,
+    //       });
+    //     } else {
+    //       setLoading(false);
+    //       return navigate("/home");
+    //     }
+    //   });
+    // }
     if (formData.type === "student") {
       dispatch(studentLogin(formData)).then((res) => {
         if (res.message === "Wrong credentials") {
@@ -168,7 +168,7 @@ const Login = () => {
               <select name="type" onChange={handleFormChange}>
                 <option value="">Select user type</option>
                 <option value="admin">Admin</option>
-                <option value="tutor">Teacher</option>
+                {/* <option value="tutor">Teacher</option> */}
                 <option value="student">Student</option>
               </select>
               <button type="submit">LOGIN</button>
