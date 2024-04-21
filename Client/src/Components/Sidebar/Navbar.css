@@ -35,7 +35,7 @@ background: linear-gradient(180deg, rgba(141,142,167,1) 0%, rgba(197,212,219,1) 
 }
 
 #sidebar .side-menu li:nth-child(1) {
-  background: var(--bblue);
+  background: #716B8D;
   position: relative;
 }
 

@@ -60,31 +60,31 @@ const Home = () => {
       title: "Admins",
       number: dashboard?.admins?.length || 0,
     },
-    {
-      icon: <BiUserVoice />,
-      title: "Teachers",
-      number: dashboard?.tutors?.length || 0,
-    },
+    // {
+    //   icon: <BiUserVoice />,
+    //   title: "Teachers",
+    //   number: dashboard?.tutors?.length || 0,
+    // },
     {
       icon: <PiStudentDuotone />,
       title: "Students",
       number: dashboard?.students?.length || 0,
     },
-    {
-      icon: <TbLayoutGridAdd />,
-      title: "Contents",
-      number: dashboard?.contents?.length || 0,
-    },
+    // {
+    //   icon: <TbLayoutGridAdd />,
+    //   title: "Contents",
+    //   number: dashboard?.contents?.length || 0,
+    // },
     {
       icon: <TbBrandSpeedtest />,
       title: "Quizzes",
       number: dashboard?.quizzes?.length || 0,
     },
-    {
-      icon: <AiOutlineQuestion />,
-      title: "Doubts",
-      number: dashboard?.doubts?.length || 0,
-    },
+    // {
+    //   icon: <AiOutlineQuestion />,
+    //   title: "Doubts",
+    //   number: dashboard?.doubts?.length || 0,
+    // },
   ];
 
   useEffect(() => {
